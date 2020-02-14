@@ -3,22 +3,55 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-      <link rel="stylesheet" href="{% static 'assets/css/identity.css' %}">
-    <title>Identity </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{% static 'assets3/css/identity.css' %}">
+    <title>Identity</title>
   </head>
-  <body>
-    <div id="pricing-table" class="clear">
-         <div class="plan" id="most-popular">
-            <h3>IDENTITY PROOF<span>PHOTO</span></h3>
-            <a class="DETAILS"</a>
+  
+  <body onload="init()">
+    <div id="main-box" class="clear"> 
+      <div class="plan" id="inner-box">
+        <h3>IDENTITY PROOF<span>PHOTO</span></h3>
+        <a class="DETAILS"></a>
+          <form id="input-details">
             <ul>
-                <li><b>NAME</b> </li>
-                <li><b>BRANCH</b></li>
-                <li><b>ROLL NO.</b></li>
-    			<li><b>YEAR</b> </li>
+              <li>Name</li>
+                <input type="text" id="fname"></input>
+              
+              <li>Branch</li>
+                <input type="text" id="branch"></input>
+              
+              <li>Roll No</li>
+                <input type="text" id="rollNo"></input>
+              
+              <li>Year</li>
+                <input type="text" id="year"></input>
             </ul>
-           <h4><span>PHOTO</span></h4>
-           <h4><span>PHOTO</span></h4>
+            <p></p><p></p>
+            <input type="button" id="Submit" onclick="formsubmit()" value="Submit">
+          </form>
+          <div id="get-details">
+            <h2>
+              Input Details
+            </h2>
+            <p>
+              Name - <span id="uname"></span>
+            </p>
+            <p>
+              Branch - <span id="ubranch"></span>
+            </p>
+            <p>
+              Roll No - <span id="uroll"></span>
+            </p>
+            <p>
+              Year - <span id="uyear"></span>
+            </p>
+          </div>
+          <h4><span>FRONT</span></h4>
+          <h4><span>BACK</span></h4>
+          <script src="{% static 'identity.js' %}"></script>
   </body>
 </html>
