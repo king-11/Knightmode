@@ -1,4 +1,4 @@
-
+* {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   list-style: none;
@@ -38,7 +38,7 @@ body {
   perspective: 1000;
 	transition: .9s;
 	transform-style: preserve-3d;
-	width: 100%;
+	width: 90%;
 }
 
 /* Front - Calendar */
@@ -63,7 +63,7 @@ body {
 	color: #dfebed;
 	display: flex;
 	justify-content: space-between;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 600;
 	padding: 30px 40px;
 }
@@ -78,7 +78,7 @@ body {
 	color: #fff;
 	display: flex;
 	flex-direction: column;
-	padding: 0 40px;
+	padding: 0 20px;
 }
 
 .weeks div {
@@ -223,4 +223,13 @@ body {
 
 .front, .back {
 	backface-visibility: hidden;
+}
+
+
+
+@media screen and (max-width:408px)
+{
+  .calendar{
+    width: 100%
+  }
 }
