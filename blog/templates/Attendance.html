@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets2/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+  <link rel="stylesheet" href="{% static 'assets2/fonts/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets2/css/Features-Boxed.css' %}">
+  <link rel="stylesheet" href="{% static 'assets2/css/Footer-Basic.css' %}">
+  <link rel="stylesheet" href="{% static 'assets2/css/Footer-Dark.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="{% static 'assets2/css/Navigation-Clean.css' %}">
+  <link rel="stylesheet" href="{% static 'assets2/css/styles.css' %}">
+</head>
+
+<body>
+  <section class="features-icons bg-light text-center" id="top" style="background-color: #f8f9fa !important;">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container"><a class="navbar-brand" href="{% url 'blog:welcome' %}">To Welcome Page</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'blog:attendance' %}">Attendance</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'blog:Calendar' %}">Calendar</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="#">Time Table</a></li>
+                  <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Academic Stuff</a>
+                      <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'blog:identity' %}">Identity Proof</a><a class="dropdown-item" role="presentation" href="{% url 'blog:curriculum' %}">Curriculum</a><a class="dropdown-item" role="presentation" href="#">Notes</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+  <div class="features-boxed">
+    <div class="container">
+      <div class="intro">
+        <h2 class="text-center">Attendance Manager</h2>
+        <p class="lead text-center text-primary d-xl-flex">We look after your attendance in classes so you can reach the required criterion to prevent a Z grade .&nbsp;</p>
+      </div>
+      <div class="row justify-content-center features">
+
+        <div class="col-sm-6 col-md-5 col-lg-4 item">
+          <div class="box" style="margin-top: 0px;">
+            <h3 class="name">MA102</h3>
+            <div class="border-primary" data-bs-hover-animate="pulse" style="margin-top: 10px;"><canvas id="chDonut1"></canvas></div>
+            <p id="chPara1">Paragraph</p><button class="btn btn-success" type="button" style="margin-right: 20px;"onclick="present(chDonutData1,0,'chDonut1','chPara1')">Present</button><button class="btn btn-warning" onclick="absent(chDonutData1,0,'chDonut1','chPara1')" type="button">Absent</button>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-4 item">
+          <div class="box">
+            <h3 class="name">CSO 102</h3>
+            <div class="border-primary" data-bs-hover-animate="pulse" style="margin-top: 10px;"><canvas id="chDonut2"></canvas></div>
+            <p id="chPara2">Paragraph</p><button class="btn btn-success" type="button" style="margin-right: 20px;"onclick="present(chDonutData2,1,'chDonut2','chPara2')">Present</button><button class="btn btn-warning" onclick="absent(chDonutData2,1,'chDonut2','chPara2')" type="button" style="margin-right: 20px;">Absent</button>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-4 item">
+          <div class="box">
+            <h3 class="name">CSE 103</h3>
+            <div class="border-primary" data-bs-hover-animate="pulse" style="margin-top: 10px;"><canvas id="chDonut3"></canvas></div>
+            <p id="chPara3">Paragraph</p><button class="btn btn-success" type="button" style="margin-right: 20px;"onclick="present(chDonutData3,2,'chDonut3','chPara3')">Present</button><button class="btn btn-warning" onclick="absent(chDonutData3,2,'chDonut3','chPara3')" type="button" style="margin-right: 20px;">Absent</button>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-4 item">
+          <div class="box">
+            <h3 class="name">ME 104</h3>
+            <div class="border-primary" data-bs-hover-animate="pulse" style="margin-top: 10px;"><canvas id="chDonut4"></canvas></div>
+            <p id="chPara4">Paragraph</p><button class="btn btn-success" type="button" style="margin-right: 20px;"onclick="present(chDonutData4,3,'chDonut4','chPara4')">Present</button><button class="btn btn-warning" onclick="absent(chDonutData4,3,'chDonut4','chPara4')" type="button" style="margin-right: 20px;">Absent</button>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-4 item">
+          <div class="box">
+            <h3 class="name">EO 101</h3>
+            <div class="border-primary" data-bs-hover-animate="pulse" style="margin-top: 10px;"><canvas id="chDonut5"></canvas></div>
+            <p id="chPara5">Paragraph</p><button class="btn btn-success" type="button" style="margin-right: 20px;"onclick="present(chDonutData5,4,'chDonut5','chPara5')">Present</button><button class="btn btn-warning" onclick="absent(chDonutData5,4,'chDonut5','chPara5')" type="button" style="margin-right: 20px;">Absent</button>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-4 item">
+          <div class="box">
+            <h3 class="name">ED</h3>
+            <div class="border-primary" data-bs-hover-animate="pulse" style="margin-top: 10px;"><canvas id="chDonut6"></canvas></div>
+            <p id="chPara6">Paragraph</p><button class="btn btn-success" type="button" style="margin-right: 20px;"onclick="present(chDonutData6,5,'chDonut6','chPara6')">Present</button><button class="btn btn-warning" onclick="absent(chDonutData6,5,'chDonut6','chPara6')" type="button" style="margin-right: 20px;">Absent</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-basic">
+    <footer>
+      <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a>
+      </div>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Home</a></li>
+        <li class="list-inline-item"><a href="#">Services</a></li>
+        <li class="list-inline-item"><a href="#">About</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+      <p class="copyright">Company Name © 2017</p>
+    </footer>
+  </div>
+  <script src="{% static 'assets2/js/jquery.min.js' %}"></script>
+  <script src="{% static 'assets2/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets2/js/chart.min.js' %}"></script>
+  <script src="{% static 'assets2/js/bs-init.js' %}"></script>
+  <script src="{% static 'Attendance.js' %}"></script>
+</body>
+
+</html>

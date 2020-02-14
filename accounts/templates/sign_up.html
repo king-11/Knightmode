@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login</title>
+    <title>SignUp</title>
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Dark.css' %}">
@@ -21,8 +21,9 @@
       <form action="/accounts/signup/" method="POST">
         <h5 id="head" class=".small">SignUp Form</h5>
         <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-        <input type="hidden" name="csrfmiddlewaretoken" value="6Ridg4FnDyh85WThS7cW5tmcOd6ap1M7PNlQ9sBlSYdltNqQhzk5zlOc97ugrfdG">
         
+        <input type="hidden" name="csrfmiddlewaretoken" value="6Ridg4FnDyh85WThS7cW5tmcOd6ap1M7PNlQ9sBlSYdltNqQhzk5zlOc97ugrfdG">
+           {% csrf_token %}
             <div class="form-group"><label for="id_username">Username:</label></div>
             <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username">
    

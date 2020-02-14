@@ -23,11 +23,11 @@
                 <div class="collapse navbar-collapse"
                     id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Attendance</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Calendar</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Time Table</a></li>
-                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Academic Stuff</a>
-                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'blog:identity' %}">Identity Proof</a><a class="dropdown-item" role="presentation" href="#">Curriculum</a><a class="dropdown-item" role="presentation" href="#">Notes</a></div>
+                      <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'blog:attendance' %}">Attendance</a></li>
+                      <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'blog:Calendar' %}">Calendar</a></li>
+                      <li class="nav-item" role="presentation"><a class="nav-link" href="#">Time Table</a></li>
+                      <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Academic Stuff</a>
+                          <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'blog:identity' %}">Identity Proof</a><a class="dropdown-item" role="presentation" href="{% url 'blog:curriculum' %}">Curriculum</a><a class="dropdown-item" role="presentation" href="#">Notes</a></div>
                         </li>
                     </ul>
                 </div>

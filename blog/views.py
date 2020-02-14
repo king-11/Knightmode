@@ -9,3 +9,9 @@ def calendar(request):
 
 def identity(request):
     return render(request, 'identity.html', {})
+
+def curriculum(request):
+    return render(request, 'curriculum.html', {})
+
+def attendance(request):
+    return render(request, 'Attendance.html', {})
