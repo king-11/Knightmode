@@ -21,8 +21,8 @@ Linux :-
 
 >You must have installed pip3 and python3 in your system. If not then follow below commands
 >
->sudo apt-get install python-pip python-dev
->python3 -m pip install --upgrade pip
+>1. sudo apt-get install python-pip python-dev
+>2. python3 -m pip install --upgrade pip
 
 >Now install django>
 >
