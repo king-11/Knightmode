@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Dark.css' %}">
+</head>
+
+<body>
+    <div class="login-dark">
+      <div class="container">
+    <div class="jumbotron">
+      <h1>College Bud</h1>
+    </div>
+        <form action="{% url 'accounts:login' %}" method="POST">
+            <h5 id="head"class=".small">Login Form</h5>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">{{ field.label_tag }}</div>
+                {{ field }}
+                {% if field.help_text %}
+                  <small style="color: grey">{{ field.help_text }}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                  <p style="color: red">{{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+            <div class="form-group"><input class="btn btn-primary btn-block" type="submit" value="Login"></div>
+            <a class="forgot" href="{% url 'accounts:signup' %}">Create New Account</a>
+        </form>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+
+</html>

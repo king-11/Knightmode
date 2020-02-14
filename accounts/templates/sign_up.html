@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Dark.css' %}">
+</head>
+
+<body>
+    <div class="login-dark">
+      <div class="container">
+    <div class="jumbotron">
+      <h1>College Bud</h1>
+    </div>
+    <div></br>
+      <form action="/accounts/signup/" method="POST">
+        <h5 id="head" class=".small">SignUp Form</h5>
+        <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+        <input type="hidden" name="csrfmiddlewaretoken" value="6Ridg4FnDyh85WThS7cW5tmcOd6ap1M7PNlQ9sBlSYdltNqQhzk5zlOc97ugrfdG">
+        
+            <div class="form-group"><label for="id_username">Username:</label></div>
+            <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username">
+   
+            <div class="form-group"><label for="id_first_name">First name:</label></div>
+            <input type="text" name="first_name" maxlength="30" id="id_first_name">
+     
+            <div class="form-group"><label for="id_last_name">Last name:</label></div>
+            <input type="text" name="last_name" maxlength="30" id="id_last_name">
+
+            <div class="form-group"><label for="id_email">Email:</label></div>
+            <input type="email" name="email" maxlength="254" required="" id="id_email">
+
+        
+            <div class="form-group"><label for="id_password1">Password:</label></div>
+            <input type="password" name="password1" required="" id="id_password1">
+  
+            <div class="form-group"><label for="id_password2">Password confirmation:</label></div>
+            <input type="password" name="password2" required="" id="id_password2">
+       
+        <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div>
+        <a class="forgot" href="/accounts/login/">Go to Login Page</a>
+    </form>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+
+</html>
