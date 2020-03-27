@@ -14,35 +14,35 @@
 <body>
     <div class="login-dark">
       <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron" style="background-color: #1e2833 !important">
       <h1>College Bud</h1>
     </div>
     <div></br>
       <form action="/accounts/signup/" method="POST">
         <h5 id="head" class=".small">SignUp Form</h5>
         <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-        
+
         <input type="hidden" name="csrfmiddlewaretoken" value="6Ridg4FnDyh85WThS7cW5tmcOd6ap1M7PNlQ9sBlSYdltNqQhzk5zlOc97ugrfdG">
            {% csrf_token %}
             <div class="form-group"><label for="id_username">Username:</label></div>
             <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username">
-   
+
             <div class="form-group"><label for="id_first_name">First name:</label></div>
             <input type="text" name="first_name" maxlength="30" id="id_first_name">
-     
+
             <div class="form-group"><label for="id_last_name">Last name:</label></div>
             <input type="text" name="last_name" maxlength="30" id="id_last_name">
 
             <div class="form-group"><label for="id_email">Email:</label></div>
             <input type="email" name="email" maxlength="254" required="" id="id_email">
 
-        
+
             <div class="form-group"><label for="id_password1">Password:</label></div>
             <input type="password" name="password1" required="" id="id_password1">
-  
+
             <div class="form-group"><label for="id_password2">Password confirmation:</label></div>
             <input type="password" name="password2" required="" id="id_password2">
-       
+
         <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div>
         <a class="forgot" href="/accounts/login/">Go to Login Page</a>
     </form>

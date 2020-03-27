@@ -15,3 +15,6 @@ def curriculum(request):
 
 def attendance(request):
     return render(request, 'Attendance.html', {})
+
+def notes(request):
+    return render(request, 'notes.html', {})
