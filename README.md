@@ -32,4 +32,4 @@ Linux :-
 >
 >python3 manage.py runserver
 
-Open link http://127.0.0.1:8000/accounts/login/
+Open link http://localhost:8000/accounts/login/
